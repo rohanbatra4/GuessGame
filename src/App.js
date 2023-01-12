@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, FormGroup, Label, Input, Alert, Button } from 'reactstrap';
 import './styles/Game.css';
 
+
 function NumberGuesser() {
   const [number, setNumber] = useState(Math.floor(Math.random() * 100) + 1);
   const [guess, setGuess] = useState('');
@@ -29,10 +30,10 @@ function NumberGuesser() {
 
   return (
     <div className="center-align">
-      <h1 className="animated fadeInDown">Guess the Number</h1>
-      <Form onSubmit={handleSubmit} className="animated fadeIn">
+      <h1 className="header">Guess the Number</h1>
+      <Form onSubmit={handleSubmit}>
         <FormGroup>
-          <Label for="guess">Enter your guess:</Label>
+          <Label for="guess" className="form">Enter your guess:</Label>
           <Input
             type="number"
             name="guess"
@@ -41,10 +42,10 @@ function NumberGuesser() {
             onChange={(e) => setGuess(e.target.value)}
           />
         </FormGroup>
-        <Button className="stylish-button animated fadeInUp" color="primary">Guess</Button>
+        <Button className="stylish-button" color="primary">Guess</Button>
       </Form>
-      {message && <Alert className="animated fadeInUp" color={guess === number ? 'success' : 'danger'}>{message}</Alert>}
-      <Button className="restart-button animated fadeInUp" color="secondary" onClick={restartGame}>
+      {message && <Alert className="display-message" color={guess === number ? 'pass' : 'danger'}>{message}</Alert>}
+      <Button className="restart-button" color="secondary" onClick={restartGame}>
         Restart Game
       </Button>
     </div>
