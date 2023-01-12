@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, FormGroup, Label, Input, Alert, Button } from 'reactstrap';
 import './styles/Game.css';
+import movingImage from './images/bg.jpg';
 
 
 function NumberGuesser() {
@@ -30,6 +31,7 @@ function NumberGuesser() {
 
   return (
     <div className="center-align">
+      <img src={movingImage} alt="Guess Logo" className="moving-image" />
       <h1 className="header">Guess the Number</h1>
       <Form onSubmit={handleSubmit}>
         <FormGroup>

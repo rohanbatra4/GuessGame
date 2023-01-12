@@ -75,6 +75,22 @@
     transform: translateY(2px);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
   }
+  .moving-image {
+    position: absolute;
+    width: 120px; 
+    animation: moveRight 5s linear infinite;
+    top: 35%;
+    left: 40%;
+  }
+  
+  @keyframes moveRight {
+    from {
+      transform: translateX(0); /* starting position */
+    }
+    to {
+      transform: translateX(200%); /* ending position */
+    }
+  }
   
    
   
