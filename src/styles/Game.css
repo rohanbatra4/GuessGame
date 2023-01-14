@@ -77,7 +77,7 @@
   }
   .moving-image {
     position: absolute;
-    width: 120px; 
+    width: 110px; 
     animation: moveRight 5s linear infinite;
     top: 35%;
     left: 40%;
