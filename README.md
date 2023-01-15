@@ -1,3 +1,11 @@
+# About
+This is a simple React component that implements a number guessing game. The component uses the useState hook from React to manage the component's state, which includes the randomly generated number to be guessed, the player's guess, a message displayed to the player, and the number of attempts made.
+
+When the player submits their guess, the component calls the handleSubmit function, which increments the number of attempts and sets the message state depending on whether the guess is too low, too high, or correct.
+
+The component also includes a "Restart Game" button, which when clicked, will call the restartGame function, which sets the number, guess, message, and attempts states back to their initial values.
+
+The component also uses some Bootstrap components to style the form and buttons. The component also uses a background image and some CSS to style the overall layout of the game.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
